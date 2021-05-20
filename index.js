@@ -94,3 +94,75 @@ function isEvenValue(obj) {
 }
 
 isEvenValue({ x: 1, y: 5, z: 8 });
+
+//TASKS FROM CODEWARS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+//1 https://www.codewars.com/kata/555a67db74814aa4ee0001b5
+
+function isNumEven(a) {
+  if (a % 2 == 0) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+}
+
+isNumEven(44);
+
+//2 https://www.codewars.com/kata/5861d28f124b35723e00005e
+
+function homecoming(distance, fuel) {
+  let x = 1 / 25;
+  let y = distance * x;
+  if (y <= fuel) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+}
+homecoming(50, 2);
+
+//3 https://www.codewars.com/kata/53ee5429ba190077850011d4
+
+function double(a) {
+  return console.log(a * 2);
+}
+double(7);
+
+//4 https://www.codewars.com/kata/57eae20f5500ad98e50002c5
+
+function hateSpaces(str) {
+  let splt = str.split(' ');
+  let res = '';
+  for (let i = 0; i < splt.length; i++) {
+    let x = splt[i];
+    res += x;
+  }
+  console.log(res);
+}
+hateSpaces('How Are You?');
+
+//5 https://www.codewars.com/kata/53af2b8861023f1d88000832
+
+function banjo(name) {
+  if (name[0] == 'R' || name[0] == 'r') {
+    console.log(`${name} plays banjo`);
+  } else console.log(`${name} does not play banjo`);
+}
+
+banjo('Vadim');
+
+//6 https://www.codewars.com/kata/535474308bb336c9980006f2
+
+let greet = {
+  name: 'vadIM',
+  nameGreeting() {
+    let x = this.name;
+    let y = x.slice(1);
+    x = x[0].toUpperCase();
+    y = y.toLowerCase();
+    let res = `Hello ${x + y}!`;
+    return console.log(res);
+  },
+};
+greet.nameGreeting();
