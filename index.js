@@ -42,14 +42,16 @@ let tree = {
   height: 30,
   'quantity of leafs': 7777,
   family: 'mafia',
+  separate() {
+    for (let i in this) {
+      if (typeof this[i] === 'number') {
+        this[i] /= 2;
+      }
+    }
+  },
 };
-console.log(tree);
 
-for (let i in tree) {
-  if (typeof tree[i] === 'number') {
-    tree[i] /= 2;
-  }
-}
+tree.separate();
 console.log(tree);
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
